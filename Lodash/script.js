@@ -29,8 +29,8 @@ const _ = {
       let paddedString = (' '.repeat(startPaddingLength) + string + ' '.repeat(3))
       return paddedString
     }
-  }
-};
-
-// Testing:
-// console.log(_.clamp(1, 2, 4))
+  },
+  has: function(object, key) {
+    return object[key] !== undefined;
+  },
+}
