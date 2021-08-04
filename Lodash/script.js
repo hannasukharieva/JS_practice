@@ -33,4 +33,12 @@ const _ = {
   has: function(object, key) {
     return object[key] !== undefined;
   },
+  invert: function(object) {
+    const invertedObject = {}
+    for (let key in object) {
+      const originalValue = object[key]
+      invertedObject[originalValue] = key
+    }
+    return invertedObject
+  },
 }
