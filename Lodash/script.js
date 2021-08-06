@@ -51,4 +51,21 @@ const _ = {
     }
     return undefined
   },
+  drop: function(arr, num) {
+    const newArr = []
+    if (num) {
+      arr.forEach((elem, i) => {
+        if (i >= num) {
+          newArr.push(elem)
+        }
+      })
+    } else {
+      arr.forEach((elem, i) => {
+        if (i >= 1) {
+          newArr.push(elem)
+        }
+      })
+    }
+    return newArr
+  },
 }
