@@ -51,21 +51,25 @@ const _ = {
     }
     return undefined
   },
-  drop: function(arr, num) {
-    const newArr = []
-    if (num) {
-      arr.forEach((elem, i) => {
-        if (i >= num) {
-          newArr.push(elem)
-        }
-      })
-    } else {
-      arr.forEach((elem, i) => {
-        if (i >= 1) {
-          newArr.push(elem)
-        }
-      })
-    }
-    return newArr
-  },
+
+  // Ugly brute force solution
+  // drop: function(arr, num) {
+  //   const newArr = []
+  //   if (num) {
+  //     arr.forEach((elem, i) => {
+  //       if (i >= num) {
+  //         newArr.push(elem)
+  //       }
+  //     })
+  //   } else {
+  //     arr.forEach((elem, i) => {
+  //       if (i >= 1) {
+  //         newArr.push(elem)
+  //       }
+  //     })
+  //   }
+  //   return newArr
+  // },
+  // Pretty and sexy solution
+  drop: (arr, num = 1) => arr.slice(num),
 }
