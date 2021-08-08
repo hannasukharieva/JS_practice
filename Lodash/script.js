@@ -72,4 +72,17 @@ const _ = {
   // },
   // Pretty and sexy solution
   drop: (arr, num = 1) => arr.slice(num),
+  drop: (arr, num = 1) => arr.slice(num),
+  // DropWhile method (brute force)
+  // dropWhile: (array, predicate) => {
+  //   const dropNumber = array.findIndex((element, index) => {return !predicate(element, index,array)})
+  //   const droppedArray = _.drop(array, dropNumber)
+  //   return droppedArray
+  // }
+  // DropWhile method
+  dropWhile: (array, predicate) => {
+    const dropNumber = array.findIndex((element, index) => !predicate(element, index, array))
+    
+    return _.drop(array, dropNumber)
+  }
 }
