@@ -84,5 +84,15 @@ const _ = {
     const dropNumber = array.findIndex((element, index) => !predicate(element, index, array))
     
     return _.drop(array, dropNumber)
-  }
+  },
+  // Chunk method - returns an array broken down by even chunks
+  chunk: (array, size = 1) => {
+    const arrayChunks = []
+    for (let i = 0; i < array.length; i += size) {
+      const arrayChunk = array.slice(i, i + size)
+      arrayChunks.push(arrayChunk)
+    }
+    
+    return arrayChunks
+  },
 }
