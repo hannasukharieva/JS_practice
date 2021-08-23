@@ -28,12 +28,11 @@ let {name, age} = cat;
 
 let {hobby} = {hobby: 'playing'};
 
+// const x = {
+//   foo: 'bar',
+//   far: 'boo',
+//   faz: 'baz',
+// }
 
-const x = {
-  foo: 'bar',
-  far: 'boo',
-  faz: 'baz',
-}
-
-const key = 'far';
-const { foo, ...everythingElse} = x;
+// const key = 'far';
+// const { foo, ...everythingElse} = x;
